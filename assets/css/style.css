@@ -1,0 +1,48 @@
+:root {
+  --bg-green: #65c466;
+  --color-white: #fff;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-family: Gilroy;
+}
+body {
+  margin-top: 5px;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-style: light;
+  font-weight: 400;
+  src: local("Gilroy"), local("Gilroy-Light"),
+    url(../../fonts/Gilroy-Light.woff), url(../../fonts/Gilroy-Light.woff2);
+}
+@font-face {
+  font-family: Gilroy;
+  font-style: Regular;
+  font-weight: 600;
+  src: local("Gilroy"),
+    local("Gilroy-Regular") url(../../fonts/Gilroy-Regular.woff),
+    url(../../fonts/Gilroy-Regular.woff2);
+}
+@font-face {
+  font-family: Gilroy;
+  font-style: Bold;
+  font-weight: 800;
+  src: local("Gilroy"), local("Gilroy-Bold") url(../../fonts/Gilroy-Bold.woff),
+    url(../../fonts/Gilroy-Bold.woff2);
+}
+
+@font-face {
+  font-family: Trajan Pro 3;
+  font-style: Bold;
+  font-weight: 400;
+  src: local("Trajan Pro 3"), url(../../fonts/TrajanPro3Regular.woff),
+    url(../../fonts/TrajanPro3Regular.woff2);
+}
+
+.flex-colomn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
