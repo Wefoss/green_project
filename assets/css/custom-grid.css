@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     margin-left: calc(var(--padding-value)*-1);
     margin-right: calc(var(--padding-value)*-1);
-  }
+      }
   
   
   .row > *{
