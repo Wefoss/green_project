@@ -41,11 +41,20 @@ body {
     url(../../fonts/TrajanPro3Regular.woff2);
 }
 
-.flex-colomn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h2 {
+  font-family: Trajan Pro 3;
+  font-size: 3rem;
+  color: var(--bg-green);
+  padding: 15px 0;
 }
+
+.flex-colomn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 
 .flex-row {
   display: flex;
