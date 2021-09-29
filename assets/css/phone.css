@@ -1,0 +1,145 @@
+.phone-wrap {
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.iPhone {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.phone-img {
+  flex: 1 1 30%;
+  display: block;
+  order: 2;
+}
+
+.phone-info {
+  flex: 1 1 90%;
+}
+
+.phone-contact {
+  flex: 1 1 20%;
+}
+
+.phone-info-title {
+  padding-bottom: 46px;
+  font-size: 2em;
+}
+.form-button-wrap {
+  margin: auto;
+}
+.bottom-info {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.phone-list-info {
+  font-weight: bold;
+  list-style: circle;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+.phone-list-info::marker {
+  color: var(--bg-green);
+}
+
+.phone-list-info + .phone-list-info {
+  margin-top: 10px;
+}
+
+.phone-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 250px;
+  margin-top: 20px;
+}
+.phone-form input {
+  border: none;
+  border-bottom: 2px solid #696969;
+  border-radius: 0px;
+  width: 100%;
+  padding-left: 25px;
+}
+
+.phone-form input:focus {
+  border-color: var(--bg-green);
+}
+.phone-form .label-name,
+.phone-form .label-phone {
+  color: #a9a9a9;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+.phone-form .label-name::after,
+.phone-form .label-phone::after {
+  content: url(../images/user_kris.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  top: 160%;
+}
+.phone-form .label-phone::after {
+  content: url(../images/phone_form.svg);
+}
+
+.phone-form > div {
+  margin-bottom: 10px;
+}
+
+.form-button-wrap-btn {
+  padding: 5px 15px;
+  font-size: 0.7rem;
+}
+
+.bottom-info-link {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .phone-info {
+    flex: 1 1 30%;
+  }
+  .phone-img {
+    order: 0;
+  }
+  .form-button-wrap-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+  .bottom-info {
+    font-size: 1rem;
+  }
+  .phone-info-title {
+    font-size: 3rem;
+  }
+  .phone-list-info + .phone-list-info {
+    margin-top: 30px;
+  }
+  .phone-form .label-name,
+  .phone-form .label-phone {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .iPhone {
+    width: 80%;
+  }
+  .form-button-wrap-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .phone-form .label-name::after,
+  .phone-form .label-phone::after {
+    top: 240%;
+  }
+}
