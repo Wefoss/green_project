@@ -7,22 +7,37 @@
   padding-top: 30px;
   font-size: 1.1rem;
 }
-.slider-title {
-  font-size: 2rem;
-}
+
 
 .flex-slider {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 100%;
   align-items: flex-end;
- }
+  position: relative;
+}
 
-.slider-two, .slider-three   {
+.flex-slider::after {
+  content: url(../images/derection-left.png);
+  position: absolute;
+  top: 135%;
+  left: 35%;
+  cursor: pointer;
+}
+.flex-slider::before {
+  content: url(../images/direction-right.png);
+  position: absolute;
+  top: 135%;
+  left: 56%;
+  order: -2;
+  cursor: pointer;
+}
+
+.slider-two,
+.slider-three {
   max-width: 80%;
   min-width: 20%;
   width: 70%;
-  
 }
 .slider-one-title {
   font-size: 1rem;
@@ -33,14 +48,12 @@
   font-size: 0.8rem;
 }
 
-
-
 .slider-one {
   max-width: 90%;
   min-width: 50%;
   width: 80%;
 }
-.dfdf {
+.wrap-content {
   z-index: 4;
   position: absolute;
   bottom: 12%;
@@ -50,7 +63,7 @@
   display: none;
 }
 
-.dfdf1 {
+.wrap-content1 {
   z-index: 4;
   position: absolute;
   bottom: 12%;
@@ -69,29 +82,31 @@
   color: #fff;
 }
 
- .imagess2, .imagess1, .imagess3 {
-   position: relative;
-   padding-top: calc(120% + 50px);
- }
+.imagess2,
+.imagess1,
+.imagess3 {
+  position: relative;
+  padding-top: calc(120% + 50px);
+}
 
- .imagess2::before {
-   content: '';
-   background-image: url(../images/girl.png);
-   background-repeat: no-repeat;
-   background-size: cover;
-   position: absolute;
-   display: none;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   top: 0;
-   width: inherit;
-   width: 100%;
-   height: 100%;
-   z-index: 1;
- }
- .imagess3::before {
-  content: '';
+.imagess2::before {
+  content: "";
+  background-image: url(../images/girl.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: inherit;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.imagess3::before {
+  content: "";
   background-image: url(../images/girl.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,8 +122,8 @@
   z-index: 1;
 }
 
- .imagess1::before {
-  content: '';
+.imagess1::before {
+  content: "";
   background-image: url(../images/girl.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,14 +138,58 @@
   height: 100%;
 }
 
- @media screen and (min-width: 576px){
-  .dfdf {
+.list {
+  min-width: 30%;
+  max-width: 70%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 130px;
+}
+
+.list-item + .list-item {
+  margin-left: 8px;
+}
+
+.list-item {
+  width: 10%;
+
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(180, 172, 172);
+}
+.list-item:first-child {
+  background-color: var(--bg-green);
+}
+
+@media screen and (min-width: 576px) {
+  .wrap-content {
     display: block;
   }
-  .slider-one  {
+  .slider-one {
     min-width: 30%;
   }
-  .imagess3::before,  .imagess2::before{
+  .list {
+    max-width: 40%;
+  }
+  .imagess3::before,
+  .imagess2::before {
     display: block;
   }
+  .flex-slider::after {
+    top: 50%;
+    left: -4%;
   }
+  .flex-slider::before {
+    top: 50%;
+    left: 99%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flex-slider::after {
+    top: 50%;
+    left: -3%;
+  }
+}
