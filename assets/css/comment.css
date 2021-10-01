@@ -56,19 +56,20 @@
 }
 
 .user-photo-info_name p:last-child {
-  color: var(--bg-green);
   font-size: 0.8rem;
   font-weight: bold;
+  color: var(--bg-green);
 }
 
-.card_rating, .card_rating-same {
+.card_rating,
+.card_rating-same {
   position: relative;
 }
 
-
-.card_rating::after, .card_rating-same::before {
+.card_rating::after,
+.card_rating-same::before {
   content: url(../images/arrow-left.png);
-
+  cursor: pointer;
   bottom: 36%;
   left: -4%;
   position: absolute;
@@ -84,8 +85,11 @@
 .bottom-arrow {
   margin: auto;
 }
+.bottom-arrow img {
+  cursor: pointer;
+}
 .bottom-arrow img + img {
- margin-left: 30px;
+  margin-left: 30px;
 }
 
 .comment-slider-nav {
@@ -104,7 +108,8 @@
   .bottom-arrow {
     display: none;
   }
-  .card_rating::after, .card_rating-same::before  {
+  .card_rating::after,
+  .card_rating-same::before {
     display: block;
   }
 }
@@ -127,11 +132,17 @@
     padding: 20px 40px;
   }
   .card_rating::after {
-  bottom: 42%;
-  left: -2%;
+    bottom: 42%;
+    left: -2%;
   }
   .card_rating-same::before {
     bottom: 42%;
     left: 97%;
   }
 }
+
+@media screen and (min-width: 1200px){
+  .user-photo-info_name p:last-child {
+    margin-top: 10px;
+  }
+  }

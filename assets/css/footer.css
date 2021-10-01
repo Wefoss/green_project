@@ -1,0 +1,115 @@
+footer {
+  background-color: #243246;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.feedback {
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.footer-nav-wrap {
+  width: 100%;
+  order: -2;
+  padding-bottom: 25px;
+}
+.alldefencec,
+.city-krasnoyarsk {
+  padding-top: 10px;
+  color: var(--color-white);
+  text-align: center;
+}
+.alldefencec {
+  order: 2;
+}
+
+.sosial-wrap {
+  justify-content: space-between;
+  width: 60%;
+  color: var(--color-gray);
+  margin: auto;
+  /* margin-top: 40px; */
+}
+
+.footer-nav {
+  padding: 0px;
+  gap: 10px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.footer-nav li {
+  width: 45%;
+}
+.footer-phone-email {
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  gap: 10px;
+  order: -1;
+  color: var(--color-gray);
+}
+
+.footer-tel {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 576px) {
+  .footer-nav-wrap,
+  .footer-phone-email {
+    order: 0;
+  }
+  .city-krasnoyarsk {
+    order: 3;
+  }
+  .alldefencec {
+    order: -1;
+    text-align: left;
+    padding-top: 0px;
+    font-size: 1.2rem;
+  }
+  .sosial-media {
+    position: absolute;
+    bottom: 40%;
+  }
+  .feedback {
+    justify-content: space-between;
+  }
+  .sosial-wrap {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-nav li {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer-phone-email {
+    font-size: 1.2rem;
+  }
+  .footer-nav {
+    gap: 20px;
+    font-size: 1.3rem;
+  }
+  .footer-tel {
+    font-size: 1.2rem;
+  }
+  .sosial-wrap li + li {
+    margin-left: 5px;
+  }
+  .footer-phone-email {
+    align-items: flex-end;
+  }
+}

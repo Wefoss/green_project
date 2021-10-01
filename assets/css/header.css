@@ -116,7 +116,7 @@
 }
 
 .main-nav-ul {
-  margin-top: 3.5rem;
+ margin-top: 60px;
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -127,7 +127,7 @@
   position: relative;
 }
 
-ul > li:not(:last-child):hover::before {
+.main-nav-ul > li:not(:last-child):hover::before {
   content: "";
   background-image: url(../images/galo4ka.svg);
   background-repeat: no-repeat;

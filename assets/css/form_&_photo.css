@@ -30,14 +30,15 @@
 }
 .question-title {
   font-size: 2.5rem;
+  margin: 10px 0;
 }
 .title-psevdo {
-  background-color: var(--bg-green);
   width: 60px;
   height: 60px;
   position: relative;
   display: none;
   border-radius: 50%;
+  background-color: var(--bg-green);
   border: 2px solid rgb(219, 217, 217);
 }
 
@@ -107,11 +108,12 @@ form > input:first-child {
   content: "";
   width: 20px;
   height: 20px;
+  padding-right: 13px;
   background-image: url(../images/checked.svg);
   background-repeat: no-repeat;
   object-fit: cover;
   display: block;
-  padding-right: 13px;
+  cursor: pointer;
 }
 .batton-labe-wrap {
   display: flex;
@@ -125,6 +127,7 @@ form > input:first-child {
 }
 
 .btn {
+  padding: 5px 10px;
   max-width: 130px;
   overflow: hidden;
   white-space: nowrap;
@@ -199,7 +202,7 @@ form > input:first-child {
   }
   .title-psevdo {
     left: 45%;
-    top: -60px;
+    top: -55px;
   }
   form > input:first-child {
     width: 100%;
