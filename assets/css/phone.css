@@ -96,6 +96,10 @@
 .form-button-wrap-btn {
   padding: 5px 15px;
   font-size: 0.7rem;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .bottom-info-link {
