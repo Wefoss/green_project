@@ -2,13 +2,13 @@
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 5px;
 }
 
 .iPhone {
-  margin: auto;
-  display: block;
   width: 100%;
-}
+  margin-left: 10px;
+  }
 
 .phone-img {
   flex: 1 1 30%;
@@ -17,16 +17,17 @@
 }
 
 .phone-info {
-  flex: 1 1 90%;
+  flex: 0 1 90%;
 }
 
 .phone-contact {
-  flex: 1 1 20%;
+  flex: 1 1 25%;
 }
 
 .phone-info-title {
   padding-bottom: 46px;
   font-size: 2em;
+  font-family: Trajan Pro 3;
 }
 .form-button-wrap {
   margin: auto;
@@ -107,9 +108,22 @@
   font-weight: bold;
 }
 
+@media screen and (min-width: 576px) {
+  .iPhone {
+    width: 100%;
+  }
+  .phone-info  {
+    flex: 1 1 90%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .phone-info {
     flex: 1 1 30%;
+  }
+  .iPhone {
+    width: 100%;
+    margin-left: 10px;
   }
   .phone-img {
     order: 0;
@@ -122,7 +136,8 @@
     font-size: 1rem;
   }
   .phone-info-title {
-    font-size: 3rem;
+    font-size: 2rem;
+    padding-bottom: 20px;
   }
   .phone-list-info + .phone-list-info {
     margin-top: 30px;
@@ -137,6 +152,15 @@
 @media screen and (min-width: 1200px) {
   .iPhone {
     width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .phone-contact {
+    flex: 1 1 20%;
+  }
+  .phone-info-title {
+    padding-bottom: 46px;
+    font-size: 3em;
   }
   .form-button-wrap-btn {
     padding: 10px 20px;

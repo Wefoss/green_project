@@ -30,6 +30,7 @@
   top: 135%;
   left: 35%;
   cursor: pointer;
+  
 }
 .flex-slider::before {
   content: url(../images/direction-right.png);
@@ -38,6 +39,7 @@
   left: 56%;
   order: -2;
   cursor: pointer;
+  
 }
 
 .slider-two,
@@ -103,7 +105,7 @@
 .slider-imagess-three::before,
 .slider-imagess-one::before {
   content: "";
-  background-image: url(../images/girl.png);
+  background-image: url(../images/builders.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -123,8 +125,9 @@
 }
 
 .slider-imagess-one::before {
-  background-image: url(../images/girl.png);
+  background-image: url(../images/sapvage.png);
   display: block;
+  
 }
 
 .list-slide-nav {
@@ -166,20 +169,18 @@
   .slider-imagess-two::before {
     display: block;
   }
-  .flex-slider::after {
-    top: 50%;
-    left: -4%;
-  }
-  .flex-slider::before {
-    top: 50%;
-    left: 99%;
-  }
+
 }
 
 @media screen and (min-width: 768px) {
+
   .flex-slider::after {
     top: 50%;
     left: -3%;
+  }
+  .flex-slider::before {
+    top: 50%;
+    left: 98%;
   }
 }
 
@@ -193,5 +194,12 @@
   .slider-one-info {
     font-size: 1rem;
     line-height: 1rem;
+  }
+  .flex-slider::after {
+    top: 50%;
+    left: -2%;
+  }
+  .slider-imagess-one::before {
+    width: 98%;
   }
 }
