@@ -65,7 +65,14 @@
   text-transform: uppercase;
   font-family: Gilroy;
   font-weight: 700;
+  transition: all ease 0.2s;
 }
+
+.btn-green:hover {
+  background-color: var(--color-white);
+  color: var(--bg-green);
+}
+
 .btn-green > span {
   max-width: 200px;
   overflow: hidden;
@@ -83,13 +90,13 @@
 }
 
 .header-burger {
-  position: relative;
-  background-color: var(--color-white);
   width: 23px;
   height: 2px;
   margin: 12px;
   top: 10px;
   border-radius: 20px;
+  position: relative;
+  background-color: var(--color-white);
 }
 
 .header-burger::before,
@@ -117,7 +124,7 @@
 }
 
 .main-nav-ul {
- margin-top: 60px;
+  margin-top: 60px;
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -125,19 +132,94 @@
   display: none;
 }
 .nav-list {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
   position: relative;
 }
 
-.main-nav-ul > li:not(:last-child):hover::before {
-  content: "";
-  background-image: url(../images/galo4ka.svg);
-  background-repeat: no-repeat;
-  object-fit: cover;
-  width: 40px;
-  height: 40px;
+
+
+.nav-list-ul {
   position: absolute;
-  left: 110%;
-  top: 10%;
+  font-size: 1rem;
+  text-transform: none;
+  display: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.sub-ul-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid white;
+  color: #fff;
+  background-color: var(--bg-green);
+}
+.sub-ul-list:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.sub-ul-list:last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.sub-ul-list a {
+  display: inline-block;
+
+  padding: 10px 0 5px ;
+}
+
+.nav-list:hover > .nav-list-ul {
+  display: block;
+}
+.nav-list-ul {
+  width: 200%;
+}
+
+
+
+.main-nav-ul > li:not(:first-child) {
+  transition: all ease-out 0.1s;
+}
+.main-nav-ul > li:not(:first-child):hover {
+  color: var(--bg-green);
+}
+
+.nav-list-company {
+  display: flex;
+  padding: 10px 15px 6px 10px;
+  align-items: baseline;
+  border: 2px solid transparent;
+  transition: ease all 0.2s;
+}
+.nav-list-company:hover {
+  border-radius: 5px;
+  border: 2px solid var(--bg-green);
+}
+
+.nav-list-company .fa-chevron-down,
+.nav-list .fa-chevron-down {
+  font-size: 1.4rem;
+  display: inline-block;
+  padding-left: 10px;
+  width: 100%;
+}
+.fa-search {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.2s;
+}
+.fa-search:hover {
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-white);
 }
 
 @media screen and (min-width: 768px) {
